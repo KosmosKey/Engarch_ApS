@@ -1,0 +1,1666 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.HomePage {
+  .HomePage__Header {
+    background: #1a0f37;
+    padding: 75px 0;
+  }
+  .MuiGrid-root {
+    flex-grow: 1;
+  }
+  .HomePage_HelpSection {
+    color: #fff;
+  }
+
+  .HomePage__SaleParagraph {
+    margin-top: 40px;
+    p {
+      color: #1a0f37;
+      font-family: "Titillium Web", sans-serif;
+    }
+  }
+
+  .Overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+  }
+
+  .CallUpPopUp__ThanksMessage {
+    position: fixed;
+    border-radius: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    z-index: 7;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 400px;
+    p {
+      font-weight: bold;
+      font-size: 17px;
+      color: #000000;
+    }
+    button {
+      margin-top: 25px !important;
+      text-transform: inherit;
+    }
+  }
+
+  .CallUpPopUp {
+    font-family: "Titillium Web", sans-serif;
+
+    ::-webkit-scrollbar {
+      display: none !important;
+    }
+    .imageUploader {
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+      margin: 10px 0;
+      .Assignment {
+        color: #1a0f37;
+      }
+
+      .ImageUploader__Result {
+        display: flex;
+        align-items: center;
+      }
+      button {
+        width: fit-content !important;
+        padding: 0px !important;
+        margin: 0px 7px !important;
+        font-size: 10px !important;
+
+        .MuiSvgIcon-root {
+          color: #fff !important;
+          font-size: 17px !important;
+        }
+      }
+      button:hover {
+        background: #1a0f37;
+        color: #fff;
+      }
+    }
+
+    .CallUpPop__Dropdown {
+      width: 100%;
+      .FormControl {
+        width: 100%;
+        background: #f1f1f1;
+        color: #1a0f37;
+        border: none !important;
+        font-weight: bold !important;
+        margin: 20px 0;
+        border: 1px solid #1a0f37 !important;
+        * {
+          border: none !important;
+        }
+        svg {
+          color: #1a0f37;
+          font-size: 2rem;
+          margin-top: -5px;
+        }
+        input {
+          width: 100%;
+        }
+        .MuiSelect-root {
+          color: #1a0f37 !important;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .CallUpPopUp__AnmodTilbudTwo {
+      position: fixed;
+      border-radius: 12px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      z-index: 7;
+      height: 100%;
+      max-height: 750px;
+      overflow: scroll;
+      width: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .TilbudParagraph {
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      .CallUpPopUp__Buttons {
+        display: flex;
+        width: 100%;
+        padding-bottom: 40px;
+        padding-top: 20px;
+        button {
+          width: 100%;
+          font-size: 13px;
+          border-radius: 13px;
+          padding: 15px;
+          font-weight: bold;
+          text-transform: inherit;
+        }
+        .Annuller {
+          background: #f4f4f4;
+          margin-left: 35px;
+          color: #1a0f37;
+          border: 1px solid #d9d9d9;
+        }
+
+        .Annuller:hover {
+          border: 1px solid #1a0f37;
+          background: #1a0f37;
+          color: #fff;
+        }
+      }
+      .MuiSelect-root {
+        font-size: 15px !important;
+      }
+      .CallUpPop__ImageCheckBoxes {
+        width: 100%;
+        .Label {
+          display: flex;
+          align-items: center;
+          width: 100;
+          max-width: 250px;
+
+          input {
+            width: fit-content;
+            background: #f1f1f1;
+            margin-right: 10px;
+          }
+        }
+      }
+      .CallUpPop__InputsParagraph {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .CallUpPop__Image {
+        width: 100%;
+        height: 100px;
+        border: 2px solid #1a0f37;
+        border-style: dashed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 60px 0;
+        margin-top: 10px;
+        position: relative;
+        input {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          cursor: pointer;
+          opacity: 0;
+        }
+        img {
+          width: 50px;
+        }
+        p {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+      }
+      textarea {
+        border: 1px solid #1a0f37;
+        outline-width: 0;
+        font-weight: bold;
+        padding: 15px;
+        margin: 10px 0;
+        border: 2px solid #1a0f37;
+        width: 100%;
+        color: #1a0f37;
+        min-height: 125px;
+        font-family: "Titillium Web", sans-serif;
+        resize: none;
+      }
+      form {
+        height: 100vh;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+        p {
+          color: #1a0f37;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .CallUpPopUp__Tilbud {
+      position: fixed;
+      border-radius: 12px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      z-index: 7;
+      height: 100%;
+      max-height: 825px;
+      overflow: scroll;
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      input[type="checkbox"] + label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      input[type="checkbox"] + label:before {
+        content: "";
+        height: 20px;
+        width: 20px;
+        margin: 10px 0;
+        margin-right: 5px;
+        display: inline-block;
+        border: 2px solid #1a0f37;
+        border-radius: 0px;
+        transition: 350ms ease;
+      }
+
+      input[type="checkbox"]:checked + label:before {
+        content: "\2713";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 20px;
+        width: 20px;
+        margin: 10px 0;
+        margin-right: 5px;
+        display: inline-block;
+        background: #1a0f37;
+        border: 2px solid #1a0f37;
+        color: #fff;
+        border-radius: 0px;
+      }
+      input {
+        background: #f1f1f1;
+        padding: 13px;
+      }
+
+      .TilbudParagraph {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+      .CallUpPopUp__Buttons {
+        display: flex;
+        width: 100%;
+        padding-bottom: 40px;
+        button {
+          width: 100%;
+          font-size: 13px;
+          border-radius: 13px;
+          padding: 15px;
+          font-weight: bold;
+          text-transform: inherit;
+        }
+        .Annuller {
+          background: #f4f4f4;
+          margin-left: 35px;
+          color: #1a0f37;
+          border: 1px solid #d9d9d9;
+        }
+
+        .Annuller:hover {
+          border: 1px solid #1a0f37;
+          background: f#1a0f37;
+          color: #fff;
+        }
+      }
+      .MuiSelect-root {
+        font-size: 15px !important;
+      }
+
+      .CallUpPop__ImageCheckBoxes {
+        width: 100%;
+        margin-top: 20px;
+
+        .Label {
+          display: flex;
+          align-items: center;
+          max-width: 260px;
+          font-size: 15px;
+          width: 100%;
+
+          .MuiSvgIcon-root {
+            flex: 1;
+            font-size: 20px !important;
+            color: #1a0f37;
+          }
+          input {
+            width: fit-content;
+            background: #f1f1f1;
+            margin-right: 10px;
+          }
+        }
+        .two {
+          max-width: 220px !important;
+        }
+      }
+      .CallUpPop__InputsParagraph {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .CallUpPop__Image {
+        width: 100%;
+        border: 2px solid #1a0f37;
+        border-style: dashed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px 0;
+        margin-top: 10px;
+        position: relative;
+        input {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          cursor: pointer;
+          opacity: 0;
+        }
+        img {
+          width: 40px;
+        }
+        p {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 10px;
+          font-size: 13px;
+        }
+      }
+      textarea {
+        border: 1px solid #1a0f37;
+        outline-width: 0;
+        font-weight: bold;
+        padding: 15px;
+        margin: 10px 0;
+        border: 2px solid #1a0f37;
+        width: 100%;
+        color: #1a0f37;
+        min-height: 80px;
+        font-family: "Titillium Web", sans-serif;
+        resize: none;
+        background: #f1f1f1;
+      }
+      form {
+        height: 100vh;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+        p {
+          color: #1a0f37;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .CallUpPopUp__Contain {
+      border-radius: 12px;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      background: #fff;
+      width: 100%;
+      max-width: 500px;
+      z-index: 7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: translate(-50%, -50%);
+      padding: 40px 20px;
+      border-radius: 12px;
+      p {
+        font-weight: bold;
+        color: #1a0f37;
+        margin-bottom: 10px;
+      }
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 70%;
+      }
+    }
+
+    button {
+      background: #1a0f37;
+      color: #fff;
+      width: 100%;
+      margin-top: 10px;
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif;
+      padding: 10px;
+      border: 2px solid transparent;
+    }
+
+    button:hover {
+      background: #fff;
+      border: 2px solid #1a0f37;
+      color: #1a0f37;
+    }
+
+    input {
+      border: 1px solid #1a0f37;
+      outline-width: 0;
+      font-weight: bold;
+      padding: 15px;
+      margin: 10px 0;
+      border: 2px solid #1a0f37;
+      width: 100%;
+      color: #1a0f37;
+    }
+
+    ::placeholder {
+      font-weight: bold;
+      color: #1a0f37;
+    }
+  }
+
+  footer {
+    background: #1a0f37;
+    padding: 40px;
+    font-family: "Titillium Web", sans-serif;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    h1 {
+      position: absolute;
+      left: 150px;
+      margin-right: 150px;
+      padding-right: 150px;
+      right: 150px;
+      font-family: "Baloo Bhai 2", cursive;
+    }
+    .Footer__TextParagraph {
+      width: fit-content;
+      text-align: center;
+    }
+  }
+
+  .HomePage__ContactHeader {
+    font-family: "Titillium Web", sans-serif;
+    background: #1a0f37;
+    padding: 40px;
+    margin-top: 100px;
+    padding-bottom: 100px;
+    h1 {
+      color: #fff;
+      font-size: 2.5rem;
+    }
+  }
+
+  .HomePage__AnswerNogle {
+    margin-top: 100px;
+    font-family: "Titillium Web", sans-serif;
+
+    .MuiAccordionSummary-content {
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    .Accordion {
+      .AccordionDetails {
+        font-weight: 600;
+        color: #1a0f37;
+        line-height: 30px;
+        padding: 0 75px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        ul {
+          margin-bottom: 15px;
+        }
+        .Text__P {
+          margin-bottom: 15px;
+        }
+      }
+      .AccordionSummary {
+        .MuiSvgIcon-root {
+          font-size: 2rem;
+          margin-right: 20px;
+          margin-bottom: -7px;
+        }
+        h1 {
+          font-size: 25px;
+          color: #1a0f37;
+          border-bottom: 1px solid #555555;
+          width: 100%;
+          padding-bottom: 10px;
+        }
+      }
+    }
+
+    .HomePage__AnswerAccordion {
+      margin-top: 35px;
+    }
+    .MuiPaper-root {
+      margin: 30px 0 !important;
+      position: relative;
+      background: transparent !important;
+      .MuiTouchRipple-root {
+        position: absolute;
+        left: 0;
+      }
+    }
+    .MuiPaper-elevation1 {
+      box-shadow: none !important;
+    }
+    .MuiAccordion-root:before {
+      display: none !important;
+    }
+
+    .HomePage__InfoText {
+      color: #1a0f37;
+      border-bottom: 2px solid #555555;
+      padding-bottom: 5px;
+    }
+  }
+
+  .HomePage__PriceTime {
+    margin-top: 100px;
+    .HomePage__PriceTimeContainer {
+      background: #f1f1f1;
+      padding: 50px;
+      font-family: "Titillium Web", sans-serif;
+
+      .HomePage__PriceTime__SaveTime {
+        display: flex;
+        align-items: center;
+        h2 {
+          color: #000000;
+          margin-bottom: 20px;
+        }
+        p {
+          color: #1a0f37;
+        }
+        img {
+          width: 150px;
+          margin-right: 20px;
+        }
+      }
+      .HomePage__PriceTime__SaveMoney {
+        display: flex;
+        align-items: center;
+        h2 {
+          color: #000000;
+          margin-bottom: 20px;
+        }
+        p {
+          color: #1a0f37;
+        }
+        img {
+          width: 130px;
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+
+  .HomePage__Ydelser {
+    color: #1a0f37;
+    margin-top: 100px;
+    font-family: "Titillium Web", sans-serif;
+
+    h1 {
+      border-bottom: 2px solid #555555;
+      padding-bottom: 5px;
+    }
+    p {
+      margin-top: 15px;
+      font-weight: 500;
+    }
+  }
+
+  .HomePage__NewHous {
+    margin-top: 125px;
+    .HomePage__NewHoursButton {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      button {
+        font-family: "Montserrat", sans-serif;
+        background: transparent;
+        border: 2px solid #1a0f37;
+        text-transform: inherit;
+        font-size: 14px;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #1a0f37;
+        padding: 8px 75px;
+        margin-top: 15px;
+      }
+
+      button:hover {
+        background: #1a0f37;
+        color: #fff;
+      }
+    }
+    .HomePage__NewHousTitel {
+      background: #f1f1f1;
+      padding: 40px;
+
+      h1,
+      p {
+        font-family: "Titillium Web", sans-serif;
+      }
+      h1 {
+        border-bottom: 2px solid #555555;
+        color: #1a0f37;
+        padding-bottom: 5px;
+      }
+      p {
+        margin-top: 15px;
+        color: #1a0f37;
+      }
+    }
+  }
+
+  .HomePage__Statistic {
+    margin-top: 135px;
+    font-family: "Titillium Web", sans-serif;
+    .HomePage__StatisticContainer {
+      background: #f1f1f1;
+      color: #1a0f37;
+      padding: 40px;
+      padding-bottom: 100px;
+
+      h1 {
+        border-bottom: 2px solid #555555;
+        padding-bottom: 5px;
+      }
+      p {
+        width: 90%;
+        font-weight: 500;
+        padding-top: 10px;
+      }
+    }
+    .HomePage__StatisticContainerTwo {
+      display: flex;
+      justify-content: center;
+    }
+    .HomePage__StatisticPrice {
+      background: #fafafa;
+      padding: 35px;
+      color: #1a0f37;
+      max-width: 1000px;
+      margin-top: -75px;
+      box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.75);
+
+      h2 {
+        text-align: center;
+        border-bottom: 2px solid #1a0f37;
+        padding-bottom: 10px;
+        margin: 0 30px;
+        color: #000000;
+      }
+
+      .HomePage__StatisticParagraph {
+        p {
+          margin: 25px 0;
+          color: #000000;
+          font-weight: 500;
+        }
+      }
+      .HomePage__StatisticPriceView {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        button {
+          font-family: "Montserrat", sans-serif;
+          background: transparent;
+          border: 2px solid #1a0f37;
+          text-transform: inherit;
+          font-size: 14px;
+          margin-top: 15px;
+          font-weight: bold;
+          color: #1a0f37;
+          padding: 8px 30px;
+          margin-top: 15px;
+        }
+
+        button:hover {
+          background: #1a0f37;
+          color: #fff;
+        }
+
+        .HomePage__StatisticMoms {
+          color: #000000;
+          font-weight: bold;
+          margin-top: -10px;
+        }
+
+        h1 {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          font-size: 3.5rem;
+          margin-top: 10px;
+          p {
+            font-size: 20px !important;
+            font-weight: bold;
+            margin-right: 10px;
+            line-height: 63px;
+          }
+        }
+      }
+    }
+  }
+
+  .HomePage__Shower {
+    margin-top: 125px;
+    .HomePage__ContainerShower {
+      display: flex;
+      justify-content: center;
+    }
+    .HomePage__DivSelling {
+      background: #fafafa;
+      display: flex;
+      padding: 35px;
+      max-width: 1000px;
+      box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.75);
+      font-family: "Titillium Web", sans-serif;
+      margin-top: -75px;
+      h2 {
+        text-align: center;
+        border-bottom: 2px solid #1a0f37;
+        padding-bottom: 10px;
+        margin: 15px 50px 0px 50px;
+      }
+      .HomePage__Ehstablished {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+          font-size: 3.5rem;
+          color: #1a0f37;
+        }
+        p {
+          margin-top: -10px;
+          color: #000000;
+          font-weight: bold;
+        }
+        button {
+          font-family: "Montserrat", sans-serif;
+          background: transparent;
+          border: 2px solid #1a0f37;
+          text-transform: inherit;
+          font-size: 14px;
+          margin-top: 15px;
+          font-weight: bold;
+          color: #1a0f37;
+          padding: 8px 30px;
+        }
+
+        button:hover {
+          background: #1a0f37;
+          color: #fff;
+        }
+      }
+      .HomePage__DivSellingCart {
+        display: flex;
+        justify-content: flex-start;
+        margin: 25px 0;
+        color: #000000;
+        font-weight: 500;
+        .MuiSvgIcon-root {
+          margin-right: 10px;
+          color: #4cb5ab;
+        }
+      }
+      .HomePage__DivSellingCart:last-child {
+        .MuiSvgIcon-root {
+          opacity: 0;
+        }
+      }
+    }
+    .HomePage__ShowerStatisticText {
+      background: #f1f1f1;
+      font-family: "Titillium Web", sans-serif;
+      padding: 25px;
+      padding-bottom: 100px;
+      h1 {
+        color: #1a0f37;
+        border-bottom: 2px solid #555555;
+        padding-bottom: 5px;
+      }
+      p {
+        color: #1a0f37;
+        width: 90%;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .HomePage__ExtraVegge {
+    margin-top: 100px;
+    font-family: "Titillium Web", sans-serif;
+    .HomePage__PriceButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding-right: 40px;
+      .HomePage__ParagraphPrice {
+        p {
+          display: flex;
+          align-items: flex-end;
+          color: #000000;
+          font-weight: bold;
+          span {
+            color: #1a0f37;
+            font-size: 35px;
+            margin: 0 5px;
+            line-height: 33px;
+          }
+        }
+      }
+      button {
+        background: transparent;
+        color: #000000;
+        font-weight: bold;
+        border: 2px solid #1a0f37;
+        padding: 8px;
+        text-transform: inherit;
+        font-family: "Montserrat", sans-serif;
+        font-size: small;
+        width: 100%;
+        margin-top: 10px;
+      }
+      button:hover {
+        background: #1a0f37;
+        color: #fff;
+      }
+    }
+
+    .HomePage__DivExtraMoney {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f1f1f1;
+      padding: 20px;
+      .HomePage__textName {
+        color: #1a0f37;
+        width: 100%;
+        max-width: 700px;
+      }
+    }
+  }
+
+  .HomePage__FormSubmit {
+    font-family: "Titillium Web", sans-serif;
+    background: #f1f1f1;
+    padding: 75px 50px;
+
+    .Contact__Email {
+      display: flex;
+      align-items: center;
+      margin-left: -50px;
+      .Contact__EmailInfo {
+        margin-left: 10px;
+        p {
+          font-weight: bold;
+          color: #1a0f37;
+        }
+      }
+      img {
+        width: 50px;
+      }
+    }
+
+    form {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      font-family: "Titillium Web", sans-serif;
+      display: flex;
+      flex-direction: column;
+      margin-top: -225px;
+      .ImageFile {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        color: #1a0f37;
+        font-weight: bold;
+        .DocumentIcon {
+          margin-right: 5px;
+        }
+        .CancelIcon {
+          font-size: 20px;
+          margin-left: 5px;
+          color: #1a0f37;
+        }
+        button {
+          margin-left: 5px;
+          margin-top: 3px;
+          padding: 0px !important;
+        }
+      }
+      .ErrorField {
+        width: 100%;
+      }
+      .SuccessField {
+        width: 100%;
+      }
+      .MuiPaper-root {
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+      }
+
+      .IndSend {
+        background: #1a0f37;
+        color: #fff;
+        font-weight: bold;
+        border: 2px solid transparent;
+        padding: 8px;
+        text-transform: inherit;
+        font-family: "Montserrat", sans-serif;
+        font-size: small;
+        width: 100%;
+        margin-top: 10px;
+        margin: 30px 0;
+      }
+      .IndSend:hover {
+        background: transparent;
+        color: #1a0f37;
+        border: 2px solid #1a0f37;
+      }
+
+      .HomePage__WelcomeText {
+        font-size: 14px;
+        font-weight: bold;
+        color: #1a0f37;
+        text-align: center;
+        a {
+          color: #1a0f37;
+        }
+      }
+
+      input {
+        margin: 15px 0;
+        padding: 15px;
+        border: 2px solid #1a0f37;
+        outline-width: 0;
+        color: #1a0f37;
+        font-weight: 600;
+        font-size: 1rem;
+        background: #f1f1f1;
+      }
+      textarea {
+        height: 10rem;
+        margin: 15px 0;
+        padding: 15px;
+        border: 2px solid #1a0f37;
+        outline-width: 0;
+        color: #1a0f37;
+        font-weight: 600;
+        font-size: 1rem;
+        font-family: "Titillium Web", sans-serif;
+        background: #f1f1f1;
+      }
+
+      ::placeholder {
+        color: #1a0f37;
+        font-weight: bold;
+      }
+
+      .HomePage__UploadFileDiv {
+        background: #f1f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 15px;
+        margin-top: 15px;
+        border: 2px solid #1a0f37;
+        border-style: dashed;
+        cursor: pointer;
+        position: relative;
+        input {
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          opacity: 0;
+          cursor: pointer;
+          width: 100%;
+        }
+        p {
+          font-weight: bold;
+          color: #1a0f37;
+        }
+        img {
+          width: 60px;
+          margin: 10px;
+          padding-bottom: 5px;
+        }
+      }
+
+      h3 {
+        color: #1a0f37;
+        font-size: 19px;
+      }
+      .HomePage__FormLastH3 {
+        margin-top: 25px;
+        font-size: 22px;
+      }
+    }
+
+    .First_Step {
+      margin-bottom: -10px;
+      .MuiTypography-root {
+        margin-bottom: -8px;
+      }
+    }
+
+    .Last_Step {
+      margin-top: -10px;
+    }
+    .HomePage__Steps {
+      margin-left: -65px;
+      background: #f1f1f1;
+      .MuiPaper-root {
+        background: #f1f1f1;
+      }
+      .MuiStepConnector-line {
+        height: 2.5rem;
+        border-left-width: 2px;
+        margin-left: -2px;
+        margin-top: 15px;
+      }
+      .MuiStepConnector-line {
+        border-color: #1a0f37;
+      }
+      .MuiSvgIcon-root {
+        color: #fff;
+        border: 2px solid #1a0f37;
+        border-radius: 50px;
+        text {
+          display: none;
+        }
+      }
+      .MuiTypography-root {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 700;
+        font-size: 17px;
+        margin-left: 10px;
+        color: #1a0f37;
+
+        p {
+          font-size: 13px;
+          text-align: left;
+          padding-left: 15px;
+        }
+      }
+    }
+
+    h1 {
+      color: #1a0f37;
+    }
+  }
+
+  .HomePage__Prices {
+    margin-top: 150px;
+    font-family: "Titillium Web", sans-serif;
+    color: #1a0f37;
+
+    .HomePage__PricesTitleBackground {
+      background: #f4f4f4;
+      padding: 50px;
+      padding-bottom: 150px;
+      z-index: 1;
+    }
+
+    .HomePage__PricesChoices {
+      margin-top: -150px;
+      z-index: 3;
+      .HomePage__PricesDiv {
+        background: #fafafa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+        box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.75);
+        height: 100% !important;
+        ul {
+          margin-top: -10px;
+          margin-left: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+          li {
+            padding: 5px 0;
+            list-style: none;
+            font-size: 14px;
+            font-weight: 600;
+          }
+          li::before {
+            content: "\2022";
+            color: #1a0f37;
+            margin-right: 13px;
+          }
+        }
+        .HomePage__Checks {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+
+          width: 100%;
+          margin: 10px 0;
+          .MuiSvgIcon-root {
+            margin-right: 10px;
+            margin-top: 2px;
+            color: #4cb5ab;
+          }
+          p {
+            font-weight: 500;
+          }
+        }
+        h2 {
+          border-bottom: 2px solid #1a0f37;
+          width: 100%;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+        h1 {
+          font-size: 3.5rem;
+        }
+        .HomePage__moms {
+          font-size: 15px;
+          color: #000000;
+          font-weight: bold;
+          margin-top: -10px;
+        }
+
+        button {
+          margin-top: 15px;
+          text-transform: inherit;
+          font-family: "Montserrat", sans-serif;
+          background: transparent;
+          border: 1px solid #1a0f37;
+          padding: 8px 30px !important;
+          margin-bottom: 30px;
+          span {
+            color: #1a0f37 !important;
+            font-weight: bold;
+          }
+        }
+
+        button:hover {
+          background: #1a0f37;
+
+          span {
+            color: #fff !important;
+            font-weight: bold;
+          }
+        }
+
+        .HomePage__Checks {
+          display: flex;
+          img {
+            width: 35px;
+          }
+        }
+        h2 {
+          color: #000000;
+        }
+      }
+    }
+
+    padding-top: 30px;
+    .HomePage__PricesTitle {
+      .HomePage__TitlePrice {
+        width: 100%;
+        border-bottom: 2px solid #1a0f37;
+      }
+      p {
+        font-weight: 500;
+        line-height: 30px;
+        margin-top: 25px;
+        a {
+          color: #1a0f37;
+        }
+      }
+    }
+  }
+
+  .HomePage__Ytelser {
+    color: #1a0f37;
+    font-family: "Titillium Web", sans-serif;
+    margin-top: 30px;
+    .HomePage__ContainerYtelse {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .HomePage__YtelserContainers {
+      width: 85%;
+      display: flex;
+      justify-content: center;
+    }
+    .HomePage__YtelserTitle {
+      width: 100%;
+      padding-top: 50px;
+      border-bottom: 2px solid #1a0f37;
+      margin-bottom: 25px;
+    }
+    .HomePage__YtelseDiv {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      background: #f1f1f1;
+      padding: 50px 20px 50px 25px;
+      border-bottom: 4px solid #1a0f37;
+      font-family: "Montserrat", sans-serif;
+      transition: 350ms ease;
+      .MuiSvgIcon-root {
+        font-size: 15px;
+      }
+      h2 {
+        font-size: 18px;
+        color: #000000;
+      }
+    }
+    .HomePage__YtelseDiv:hover {
+      background: #1a0f37;
+      h2 {
+        color: #fff;
+      }
+    }
+    .HomePage__YtelseDiv.active {
+      cursor: pointer;
+      background: #1a0f37;
+      padding: 50px;
+      color: #fff;
+      border-bottom: 4px solid #1a0f37;
+      h2 {
+        font-size: 18px;
+        color: #fff;
+      }
+    }
+  }
+  .HomePage__Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .HomePage__Anmeldelser {
+      margin-top: 20px;
+      a {
+        font-weight: bold;
+        font-family: "Titillium Web", sans-serif;
+        color: #1a0f37;
+        font-size: 20px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+    .HomePage__StarsIcon {
+      img {
+        max-width: 200px;
+        margin-top: 20px;
+      }
+    }
+    .HomePage__Stars {
+      margin-top: 30px;
+      font-family: "Montserrat", sans-serif;
+      width: 100%;
+      max-width: 60%;
+      text-align: center;
+      p {
+        line-height: 30px;
+        font-size: 16px;
+        color: #1a0f37;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .HomePage__ButtonSection {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    button {
+      text-transform: inherit;
+    }
+    .HomePage__CallUpButton {
+      background: #1a0f37;
+      padding: 8px 30px;
+      border-radius: 0px !important;
+      color: #fff;
+      font-weight: bold;
+      font-family: "Montserrat", sans-serif;
+      border: 2px solid #fff;
+      transition: 250ms ease;
+      font-size: 15px;
+    }
+
+    .HomePage__CallUpButton:hover {
+      border: 2px solid #fff;
+      color: #fff;
+      background: #1a0f37;
+    }
+    .HomePage__ContactButton {
+      background: #1a0f37;
+      padding: 8px 40px;
+      margin-top: 20px;
+      border-radius: 0px !important;
+      color: #fff;
+      font-weight: bold !important;
+      font-family: "Montserrat", sans-serif;
+      border: 2px solid #fff;
+      transition: 250ms ease;
+      font-size: 15px;
+    }
+
+    .HomePage__ContactButton:hover {
+      border: 2px solid transparent;
+      color: #1a0f37;
+      background: #fff;
+    }
+  }
+  .HomePage_HelpSection {
+    font-family: "Titillium Web", sans-serif;
+
+    h3 {
+      margin-bottom: 20px;
+      font-size: 25px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 30px;
+      width: 80%;
+      font-weight: 500;
+    }
+  }
+}
+
+@media screen and (max-width: 959px) {
+  p {
+    width: 100% !important;
+  }
+
+  .Contact__Email {
+    margin-left: 0px !important;
+    justify-content: center;
+  }
+
+  .HomePage__Prices {
+    margin-top: 50px !important;
+  }
+  .HomePage__ButtonSection {
+    a {
+      width: 100% !important;
+    }
+  }
+
+  .HomePage__PriceButton {
+    padding-right: 0px !important;
+  }
+
+  .HomePage {
+    overflow: hidden !important;
+  }
+
+  .AccordionDetails {
+    padding: 0px !important;
+  }
+
+  .HomePage__FormSubmit {
+    padding: 35px 0px !important;
+    form {
+      width: 100% !important;
+    }
+  }
+
+  .HomePage__AnswerNogle {
+    .MuiSvgIcon-root {
+      font-size: 25px !important;
+      margin-right: 5px !important;
+    }
+    h1 {
+      font-size: 1.3rem !important;
+    }
+  }
+
+  .HomePage__UploadFileDiv {
+    p {
+      text-align: center;
+    }
+  }
+
+  .HomePage__PriceButton {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .HomePage__moms,
+  .HomePage__Ehstablished {
+    text-align: center;
+  }
+
+  .HomePage__StatisticPriceView {
+    width: 100%;
+    h1 {
+      width: 100%;
+      display: flex !important;
+      justify-content: center !important;
+      p {
+        text-align: center;
+        margin-right: 0px;
+        line-height: 20px;
+        width: fit-content !important;
+      }
+    }
+    p {
+      text-align: center;
+    }
+  }
+
+  .HomePage__Stars {
+    max-width: 100% !important;
+  }
+
+  .HomePage__YtelserContainers {
+    width: 100% !important;
+  }
+
+  .HomePage__YtelseDiv {
+    h2 {
+      font-size: 1rem !important;
+    }
+  }
+
+  .HomePage__PriceTimeContainer {
+    background: #fff !important;
+    margin-top: -50px;
+
+    .PriceTimeGrid {
+      margin-top: 20px !important;
+    }
+    .Grid__SaveTime {
+      background: #f1f1f1;
+    }
+  }
+  .HomePage__ContactHeader {
+    padding-bottom: 40px !important;
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .HomePage__FormSubmit {
+    h1 {
+      text-align: center;
+    }
+    .MuiPaper-root {
+      justify-content: center;
+      flex-wrap: wrap !important;
+      align-items: flex-start;
+      max-width: 500px;
+      text-align: center;
+      margin: 0 auto;
+      .Step {
+        margin-bottom: 40px;
+      }
+      .MuiStepLabel-iconContainer {
+        display: none;
+      }
+    }
+    br {
+      display: none;
+    }
+    .HomePage__Steps {
+      margin-left: 0px !important;
+    }
+
+    .MuiStepConnector-root {
+      flex: 0;
+    }
+
+    form {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      font-family: "Titillium Web", sans-serif;
+      display: flex;
+      flex-direction: column;
+      margin-top: -15px !important;
+    }
+  }
+
+  .HomePage {
+    .HomePage__Header {
+      .HomePage_HelpSection {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1211px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    position: static !important;
+    h1 {
+      position: static !important;
+      margin-right: 0px !important;
+      padding-right: 0px !important;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 503px) {
+  .HomePage__PriceTime__SaveTime,
+  .HomePage__PriceTime__SaveMoney {
+    flex-direction: column !important;
+    img {
+      margin-bottom: 15px;
+      margin-right: 0px !important;
+    }
+  }
+  .HomePage__PriceTime__SaveMoney {
+    img {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 335px) {
+  .HomePage__StatisticPriceView {
+    p {
+      line-height: 50px !important;
+    }
+    .HomePage__StatisticMoms {
+      line-height: 25px !important;
+    }
+    h1 {
+      font-size: 2.5rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 626px) {
+  .CallUpPopUp__Tilbud {
+    width: 90vw !important;
+    height: 95vh !important;
+    .CallUpPopUp__Buttons {
+      flex-direction: column;
+      .Annuller {
+        margin-left: 0px !important;
+      }
+    }
+  }
+  .CallUpPopUp__AnmodTilbudTwo {
+    width: 90vw !important;
+    height: 95vh !important;
+  }
+}
+
+@media screen and (max-height: 1000px) {
+  .CallUpPopUp__Tilbud {
+    height: 95vh !important;
+  }
+  .CallUpPopUp__AnmodTilbudTwo {
+    height: 95vh !important;
+  }
+}

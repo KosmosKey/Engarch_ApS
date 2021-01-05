@@ -1,0 +1,214 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #160d36;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: #fff;
+  transition: 350ms ease;
+
+  button {
+    padding: 8px !important;
+    display: none !important;
+  }
+  .NavBar__ContainerWidth {
+    display: flex;
+    justify-content: space-between;
+    .NavBar__EngarchLink {
+      display: flex;
+      align-items: center;
+      p {
+        margin: 0 10px;
+        font-weight: bold;
+        font-family: "Titillium Web", sans-serif;
+        font-size: 18px;
+        transition: 100ms ease;
+        cursor: pointer;
+        position: relative;
+      }
+      p::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 0% !important;
+        border-bottom: 2px solid #160d36;
+        transition: 350ms ease;
+      }
+
+      p:hover::before {
+        width: 100% !important;
+        border-bottom: 2px solid #160d36 !important;
+      }
+    }
+    .Navbar__EngarchLogo {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      p {
+        margin-left: 7px;
+        font-weight: 600;
+        color: #2e2e70;
+        border-bottom: 1px solid #b1d0e3;
+        padding-bottom: 2px;
+        font-size: 20px;
+        font-family: "Titillium Web", sans-serif;
+      }
+      .NavBar__EngarchLogoText {
+        border: 1px solid #160d36;
+        padding: 5px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Montserrat", sans-serif;
+
+        h1 {
+          font-weight: bold;
+          font-size: 30px;
+          font-family: "Baloo Bhai 2", cursive;
+        }
+      }
+    }
+  }
+}
+
+.NavigationBarResponsive {
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 350ms ease;
+  }
+  .overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .NavigationBarResponsive__List {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: #fff;
+    padding: 50px;
+    transform: translateX(100%);
+    transition: 350ms ease;
+    z-index: 3;
+    ul {
+      li {
+        font-weight: bold;
+        list-style: none;
+        font-family: "Titillium Web", sans-serif;
+        font-size: 25px;
+        margin: 10px 0;
+        transition: 150ms ease;
+        cursor: pointer;
+      }
+
+      li {
+        margin: 15px 10px;
+        font-weight: bold;
+        font-family: "Titillium Web", sans-serif;
+        font-size: 22px;
+        transition: 100ms ease;
+        cursor: pointer;
+        position: relative;
+      }
+      li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 0% !important;
+        border-bottom: 2px solid #160d36;
+        transition: 350ms ease;
+      }
+
+      li:hover::before {
+        width: 100% !important;
+        border-bottom: 2px solid #160d36 !important;
+      }
+    }
+  }
+}
+
+.NavigationBarResponsive__List.active {
+  transform: translateX(0);
+}
+
+nav.active {
+  background: #160d36;
+  .MuiSvgIcon-root {
+    color: #fff !important;
+  }
+  p {
+    color: #fff !important;
+    border-color: #fff !important;
+  }
+
+  .NavBar__EngarchLink {
+    p::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 0% !important;
+      border-bottom: 2px solid #fff;
+      transition: 350ms ease;
+    }
+
+    p:hover::before {
+      width: 100% !important;
+      border-bottom: 2px solid #fff !important;
+    }
+  }
+
+  .NavBar__EngarchLogoText {
+    border: 1px solid #fff !important;
+
+    h1 {
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 749px) {
+  nav {
+    padding: 20px 10px;
+    .NavBar__EngarchLink {
+      display: none !important;
+    }
+    button {
+      display: block !important;
+      .MuiSvgIcon-root {
+        font-size: 2rem;
+        color: #160d36;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    .Navbar__EngarchLogo {
+      padding: 0px 0px;
+      h1 {
+        font-size: 18px !important;
+      }
+      p {
+        display: none !important;
+      }
+    }
+  }
+}
