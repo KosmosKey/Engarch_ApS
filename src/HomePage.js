@@ -55,23 +55,32 @@ const HomePage = () => {
 
   const onChangeImageFile = (e) => {
     setFileLoader(true);
-    setImageFile(null);
 
-    if (e.target.files[0].size > 50097152) {
-      setFailed("Filen fylder for meget. Prøv evt. send en direkte mail");
-    }
-    if (!e.target.files[0].name.match(/\.(jpg|jpeg|png|pptx|pdf|docx|)$/)) {
-      setFailed("Upload venligst kun ‘.pdf, .png, .jpg, .pptx’ filer");
-      setFileLoader(false);
-      setImageFile(null);
-    } else {
-      const mapFiles = Array.from(e.target.files).map((file) => ({
-        id: Math.random() + 1,
-        imageName: file.name,
-      }));
-      setFailed("");
-      setImageFile(mapFiles);
-      setFileLoader(false);
+    const size = Array.from(e.target.files).map((item) => item.size);
+    const names = Array.from(e.target.files).map((item) => ({
+      id: Math.random() + 1,
+      name: item.name,
+    }));
+
+    for (let i = 0; i < e.target.files.length; i++) {
+      const file = e.target.files[i];
+      if (!file?.name.match(/\.(jpg|jpeg|png|pptx|pdf|docx|)$/)) {
+        setFailed("Upload venligst kun ‘.pdf, .png, .jpg, .pptx’ filer");
+        setImageFile([]);
+        setFileLoader(false);
+      } else {
+        const sizeOfFiles = size?.reduce((accumulator, currentValue) => {
+          return accumulator + currentValue;
+        }, 0);
+        if (sizeOfFiles > 50097152) {
+          setFailed("Filen fylder for meget. Prøv evt. send en direkte mail");
+          setFileLoader(false);
+        } else {
+          setFailed("");
+          setImageFile(names);
+          setFileLoader(false);
+        }
+      }
     }
   };
 
@@ -767,24 +776,7 @@ const HomePage = () => {
                 </p>
               </AccordionDetails>
             </Accordion>
-            {/*  <Accordion
-              expanded={expanded === "panel4"}
-              onChange={() => handleChange("panel4")}
-              className="Accordion"
-            >
-              <AccordionSummary className="AccordionSummary">
-                <h1>
-                  {expanded === "panel4" ? <RemoveIcon /> : <AddIcon />}
-                  Hvad koster det at få fjernet en væg?
-                </h1>
-              </AccordionSummary>
-              <AccordionDetails className="AccordionDetails">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab,
-                nostrum nulla tempore sapiente consectetur reiciendis laudantium
-                quo officiis, nesciunt quidem alias dolores ullam rem accusamus
-                ipsam id, eveniet deleniti voluptates.
-              </AccordionDetails>
-            </Accordion> */}
+
             <Accordion
               expanded={expanded === "panel5"}
               onChange={() => handleChange("panel5")}
@@ -1009,10 +1001,10 @@ const HomePage = () => {
                       name="textarea"
                     />
                     {imageFile &&
-                      imageFile.map(({ imageName, id }, index) => (
+                      imageFile.map(({ name, id }, index) => (
                         <div key={id} className="ImageFile">
                           <AssignmentIcon className="DocumentIcon" />
-                          {imageName}
+                          {name}
                           <IconButton onClick={() => deleteFile(id)}>
                             <CancelIcon className="CancelIcon" />
                           </IconButton>
